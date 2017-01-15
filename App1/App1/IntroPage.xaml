@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="App1.IntroPage"
+		Title="Record Shop Locator"
+		NavigationPage.BackButtonTitle="Back">
+  <ContentPage.Content>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+				RowSpacing="0" ColumnSpacing="0" Padding="0" Margin="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <!-- // -->
+      <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
+				Source="map.gif" Aspect="AspectFill" />
+      <!-- // -->
+      <StackLayout Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
+				BackgroundColor="#FB7A52" Opacity="0.75" />
+      <!-- // -->
+      <Button Grid.Column="0" Grid.Row="2"
+				Text="Find Record Shop" TextColor="White" BackgroundColor="#FB7A52"
+				HeightRequest="64" HorizontalOptions="FillAndExpand" Clicked="Handle_Clicked">
+        <Button.Margin>
+          <OnPlatform x:TypeArguments="Thickness" iOS="15, 15, 15, 15" Android="15, 15, 15, 15" />
+        </Button.Margin>
+      </Button>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
